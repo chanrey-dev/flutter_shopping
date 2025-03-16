@@ -61,13 +61,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(height: 10),
                     SizedBox(
                       height: MediaQuery.of(context).size.height *
-                          0.50, // Dynamic height for BookCard
+                          0.4, // Dynamic height for BookCard
                       child: BookCard(),
                     ),
                     SizedBox(height: 15),
                     SizedBox(
                       height: MediaQuery.of(context).size.height *
-                          0.80, // Dynamic height for TopBook
+                          0.50, // Dynamic height for TopBook
                       child: TopBook(),
                     ),
                   ],
