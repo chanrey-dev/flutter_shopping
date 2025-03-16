@@ -9,7 +9,10 @@ class BookDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detail Boox'),
+        title: Text(
+          'Detail Boox',
+          style: TextStyle(color: Colors.white),
+        ),
         backgroundColor: Colors.blueAccent,
       ),
       body: SingleChildScrollView(
@@ -34,7 +37,7 @@ class BookDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Text(
-              "Author: ${book['author']}",
+              "Price: ${book['price']}",
               style: const TextStyle(fontSize: 18, color: Colors.blueGrey),
             ),
             const SizedBox(height: 15),

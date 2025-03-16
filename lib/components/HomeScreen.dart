@@ -48,25 +48,34 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: _selectedIndex == 0
           ? Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TopUser(),
-              SizedBox(height: 20),
-              SearchBox(),
-              SizedBox(height: 15),
-              SizedBox(height: 20, child: Categories()), // ✅ Fixed category height
-              SizedBox(height: 10),
-              SizedBox(height: 320, child: BookCard()), // ✅ Removed Expanded
-              SizedBox(height: 15),
-              SizedBox(height: 500, child: TopBook())
-            ],
-          ),
-        ),
-      )
-          : widgetOptions[_selectedIndex - 1], // ✅ Loads correct screen
+              padding: const EdgeInsets.all(20.0),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TopUser(),
+                    SizedBox(height: 20),
+                    SearchBox(),
+                    SizedBox(height: 15),
+                    SizedBox(height: 20, child: Categories()),
+                    SizedBox(height: 10),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height *
+                          0.50, // Dynamic height for BookCard
+                      child: BookCard(),
+                    ),
+                    SizedBox(height: 15),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height *
+                          0.80, // Dynamic height for TopBook
+                      child: TopBook(),
+                    ),
+                  ],
+                ),
+              ),
+            )
+          : widgetOptions[_selectedIndex - 1],
+      // ✅ Loads correct screen // ✅ Loads correct screen
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: true,
         showUnselectedLabels: true,

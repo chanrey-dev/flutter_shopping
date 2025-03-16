@@ -12,27 +12,27 @@ class _TopBookState extends State<TopBook> {
   final List<Map<String, String>> listTopBook = [
     {
       'image':
-          'https://images.pexels.com/photos/4170628/pexels-photo-4170628.jpeg?auto=compress&cs=tinysrgb&w=600',
-      'title': 'Simply dummy text of the printing and typesetting',
-      'author': 'Pov Loav',
+          'https://images.pexels.com/photos/2857040/pexels-photo-2857040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      'title': 'Simply',
+      'price': '\$20.00',
     },
     {
       'image':
-          'https://images.pexels.com/photos/4170628/pexels-photo-4170628.jpeg?auto=compress&cs=tinysrgb&w=600',
-      'title': 'Simply dummy text of the printing and typesetting',
-      'author': 'Pov Loav',
+          'https://images.pexels.com/photos/1161538/pexels-photo-1161538.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      'title': 'Text of the',
+      'price': '\$30.00',
     },
     {
       'image':
-          'https://images.pexels.com/photos/4170628/pexels-photo-4170628.jpeg?auto=compress&cs=tinysrgb&w=600',
-      'title': 'Simply dummy text of the printing and typesetting',
-      'author': 'Pov Loav',
+          'https://images.pexels.com/photos/1161528/pexels-photo-1161528.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'title': 'Simply',
+      'price': '\$45.00',
     },
     {
       'image':
-          'https://images.pexels.com/photos/4170628/pexels-photo-4170628.jpeg?auto=compress&cs=tinysrgb&w=600',
-      'title': 'Simply dummy text of the printing and typesetting',
-      'author': 'Pov Loav',
+          'https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'title': 'typesetting',
+      'price': '\$15.00',
     },
   ];
 
@@ -48,14 +48,12 @@ class _TopBookState extends State<TopBook> {
               fontWeight: FontWeight.w700,
               color: Color(0xFF566573)),
         ),
-        const SizedBox(height: 20),
-        SizedBox(
-          height: 440, // Adjusted height to fit grid
+        const SizedBox(height: 10),
+
+        // Use Expanded to allow GridView to take available space
+        Expanded(
           child: GridView.builder(
             itemCount: listTopBook.length,
-            shrinkWrap: true,
-            physics:
-                const NeverScrollableScrollPhysics(), // Prevents double scroll
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2, // Display 2 items per row
               crossAxisSpacing: 12,
@@ -91,13 +89,13 @@ class _TopBookState extends State<TopBook> {
                     Text(
                       book['title'] ?? '',
                       style: const TextStyle(
-                          fontSize: 14, fontWeight: FontWeight.w600),
+                          fontSize: 16, fontWeight: FontWeight.w600),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis, // Prevents overflow
                     ),
                     Text(
-                      book['author'] ?? '',
-                      style: const TextStyle(fontSize: 12, color: Colors.grey),
+                      book['price'] ?? '',
+                      style: const TextStyle(fontSize: 14, color: Colors.grey),
                     ),
                   ],
                 ),
