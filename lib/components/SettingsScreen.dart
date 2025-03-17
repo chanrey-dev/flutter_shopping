@@ -19,6 +19,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
             decoration: BoxDecoration(color: Colors.amber),
           )
           Text("Testings")
+          Container(
+            width: 100,
+            height: 100,
+            decoration: BoxDecoration(color: Colors.amber),
+          )
         ],
       ),
     );
