@@ -15,7 +15,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
         children: [
           Text("Testings"),
           Text("Heei.."),
-          Text("test")
+          Text("test"),
+          Text("testTest")
         ],
       ),
     );
