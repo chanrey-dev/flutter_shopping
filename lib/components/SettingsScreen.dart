@@ -23,7 +23,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             decoration: BoxDecoration(color: Colors.amber),
           ),
           Text("Testings"),
-          Text("Test");
+          Text("Test")
         ],
       ),
     );
