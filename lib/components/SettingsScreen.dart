@@ -18,6 +18,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             height: 100,
             decoration: BoxDecoration(color: Colors.amber),
           )
+          Text("Testings")
         ],
       ),
     );
